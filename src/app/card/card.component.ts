@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Model } from 'src/model/userModel';
 
 @Component({
@@ -7,6 +7,8 @@ import { Model } from 'src/model/userModel';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
+  @Input() tab!: Model[];
+
   model!: Model;
   ngOnInit(): void {
     this.model = new Model();
