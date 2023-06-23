@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Model } from 'src/model/userModel';
+import { Component, OnInit } from '@angular/core';
+import { Model } from 'src/model/user.model';
+import { ContactService } from 'src/service/contact.service';
 
 @Component({
   selector: 'app-array',
@@ -7,11 +8,11 @@ import { Model } from 'src/model/userModel';
   styleUrls: ['./array.component.css'],
 })
 export class ArrayComponent implements OnInit {
-  @Input() tab!: Model[];
+  contacts!: Model[];
+
+  constructor(private contactService: ContactService) {}
+
   ngOnInit(): void {
-    this.tab = [
-      { nom: 'Bob', prenom: 'Billy', image: '', job: '' },
-      { nom: 'JO', prenom: 'JO', image: '', job: '' },
-    ];
+    this.contacts = this.contactService.getContacts();
   }
 }
