@@ -7,19 +7,28 @@ import { Model } from 'src/model/user.model';
 export class ContactService {
   contacts: Model[] = [
     {
-      nom: 'bob',
+      id: '0',
+      nom: 'Bob',
       prenom: 'Billy',
       image: 'assets/images/8machine-_-GVAYgLlpeZ8-unsplash.jpg',
       job: 'provider',
+      age: 3,
+      value: 'Rare',
     },
     {
+      id: '1',
       nom: 'JO',
       prenom: 'JO',
       image: 'assets/images/vinay-tryambake-PPL37QnXzNI-unsplash.jpg',
-      job: 'provider',
+      job: 'supplier',
+      age: 6,
+      value: 'Super Rare',
     },
   ];
   getContacts(): Model[] {
     return this.contacts;
+  }
+  getContactElem(): Model[] {
+    return this.contacts.filter((x) => x.id === '1');
   }
 }

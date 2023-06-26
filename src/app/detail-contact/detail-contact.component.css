@@ -1,0 +1,30 @@
+img {
+  width: 500px;
+  height: 750px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.cards {
+  display: inline-block;
+  background-color: #3611349f;
+  padding: 1rem;
+  margin: 0.5rem;
+  margin-left: 25%;
+  border-radius: 20px;
+}
+
+.names {
+  padding-left: 4rem;
+  color: aliceblue;
+  background-color: #3b1839ab;
+  padding: 1rem;
+  font-family: "Gasoek One", sans-serif;
+  border-end-start-radius: 20px;
+  border-end-end-radius: 20px;
+}
+
+.job {
+  background-color: aqua;
+}
