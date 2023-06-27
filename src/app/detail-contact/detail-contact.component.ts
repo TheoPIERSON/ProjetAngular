@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Model } from 'src/model/user.model';
+import { ContactService } from 'src/service/contact.service';
 
 @Component({
   selector: 'app-detail-contact',
@@ -7,6 +8,11 @@ import { Model } from 'src/model/user.model';
   styleUrls: ['./detail-contact.component.css'],
 })
 export class DetailContactComponent implements OnInit {
-  @Input() model!: Model;
-  ngOnInit(): void {}
+  @Input() contacts!: Model;
+
+  constructor(private contactDetails: ContactService) {}
+
+  ngOnInit(): void {
+    this.contacts = this.contactDetails.getContactById(1);
+  }
 }

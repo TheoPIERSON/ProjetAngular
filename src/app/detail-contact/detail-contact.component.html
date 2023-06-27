@@ -1,12 +1,12 @@
-<div class="cards" [ngClass]="{ job: model.job != 'provider' }">
+<div class="cards" [ngClass]="{ job: contacts.job != 'provider' }">
   <div class="img">
-    <img *ngIf="model.image" [src]="model.image" alt="" />
+    <img *ngIf="contacts.image" [src]="contacts.image" alt="" />
   </div>
-  <p *ngIf="!model.image">bdsfbze</p>
+  <p *ngIf="!contacts.image">bdsfbze</p>
   <div class="names">
-    <p>Nom :{{ model.nom }}</p>
-    <p>Prenom : {{ model.prenom }}</p>
-    <p>Valeur : {{ model.value }}</p>
-    <p>Age: {{ model.age }}</p>
+    <p>Nom :{{ contacts.nom }}</p>
+    <p>Prenom : {{ contacts.prenom }}</p>
+    <p>Valeur : {{ contacts.value }}</p>
+    <p>Age: {{ contacts.age }}</p>
   </div>
 </div>

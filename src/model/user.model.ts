@@ -1,5 +1,5 @@
 export class Model {
-  id!: string;
+  id!: number;
   nom!: string;
   prenom!: string;
   image!: string;
