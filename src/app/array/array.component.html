@@ -1,3 +1,3 @@
 <div class="cards" *ngFor="let item of contacts">
-  <app-card [model]="item"></app-card>
+  <a routerLink="detail-contact"> <app-card [model]="item"></app-card></a>
 </div>
