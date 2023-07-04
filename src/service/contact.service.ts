@@ -32,10 +32,13 @@ export class ContactService {
     return this.contacts.filter((x) => x.id === '1');
   }*/
 
-  getContactById(id: number): Model {
+  /* getContactById(id: number): Model {
     for (let i = 0; i < this.contacts.length; i++) {
       if (this.contacts[i].id === id) console.log(this.contacts[i]);
     }
     return new Model();
+  }*/
+  getContactById(): Model | undefined {
+    return this.contacts.find((contact) => contact.id);
   }
 }
